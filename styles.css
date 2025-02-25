@@ -26,6 +26,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
+  height: 80px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -38,17 +39,26 @@ body {
 .logo {
   display: flex;
   align-items: center;
+  /* margin-right: 160px; */
 }
 
 .logoImg {
-  height: 60px;
+  height: 80px;
   width: auto;
   object-fit: contain;
 }
 
 .nav-links {
   display: flex;
+  flex-grow: 1;
+  justify-content: center; /* Ensures the links are centered */
   list-style: none;
+  gap: 2rem; /* Increase spacing between links */
+  margin-left: auto;
+}
+
+.nav-links li {
+  display: flex;
 }
 
 .nav-links li a {
@@ -61,6 +71,49 @@ body {
 
 .nav-links li a:hover {
   color: #23486A;
+}
+
+/*** Contact us button styling ***/
+
+.contactBtn {
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #2c3e50;
+  min-width: 150px;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  padding: 16px 20px;
+  color: #fff;
+  font-family: 'poppins';
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer
+}
+
+.contactBtn:hover {
+  opacity: .95;
+}
+
+.contactBtn .animation {
+  border-radius: 100%;
+  animation: ripple 1s linear infinite;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+  }
 }
 
 /* Hero Section */
